@@ -12,37 +12,16 @@ import csv
 import numpy as np
 import random as rand
 
-def baca_file(direktori):
-    cr = csv.reader(open(direktori,"rb"))
+def baca_file(filename):
 
-    data =[]
-    data_awal=[]
-    #data_t = []
-    #data_test=[]
+    data = []
+    with open(filename, 'rb') as csvfile:
+        for rows in csv.reader(csvfile):
+            fixed_data = map(float, rows[2:6])
+            data.append(fixed_data);
 
+    return data;
 
-    #baca file dan buat array data dengan 4 kolom harga
-    for row in cr:
-        data.append([row[2],row[3],row[4],row[5]])
-        #data_t.append([row[2],row[3],row[4],row[5]])
-
-    #membuat array data awal
-    for item in data:
-        data_awal.append(item)
-    """
-    for item in data_t:
-        data_test.append(item)
-    """
-    #mengkonversi array of string ke float
-    for i in range(len(data_awal)):
-        data_awal[i] = map(float, data_awal[i])
-    """
-    for i in range(len(data_test)):
-        data_test[i] = map(float, data_test[i])
-    """
-    #print "data kluster:\n"
-    #print "\ndata test:\n",data_test
-    return data_awal
 
 def centroid_awal(data, k):
     """
