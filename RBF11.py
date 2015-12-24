@@ -21,7 +21,7 @@
 #-------------------------------------------------------------------------------
 import random
 import math
-from kmeansBener import kmeans,baca_file
+from kmeans import kmeans,baca_file
 import numpy as np
 np.seterr(divide='ignore', invalid='ignore')
 
