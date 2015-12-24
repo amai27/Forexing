@@ -12,8 +12,8 @@ import csv
 import numpy as np
 import random as rand
 
-def baca_file(filename):
 
+def baca_file(filename):
     data = []
     with open(filename, 'rb') as csvfile:
         for rows in csv.reader(csvfile):
