@@ -192,17 +192,6 @@ class RadialNet():
             jumlah += delta
         return math.sqrt(jumlah)
 
-class Partikel():
-    def __init__(self, posisi, nilaiKesalahan, kecepatan, posisiTerbaik, nilaiKesalahanTerendah):
-        self.posisi = [0 for i in range(len(posisi)-1)]
-        posisi = self.posisi
-        self.nilaiKesalahan = nilaiKesalahan
-        self.kecepatan = [0 for i in range(len(kecepatan)-1)]
-        kecepatan = self.kecepatan
-        self.posisiTerbaik = [0 for i in range(len(posisiTerbaik)-1)]
-        posisiTerbaik = self.posisiTerbaik
-        self.nilaiKesalahanTerendah = nilaiKesalahanTerendah
-
 
 
 direktori_trainData = str(raw_input("Masukkan nama data latih dengan direktorinya: "))
